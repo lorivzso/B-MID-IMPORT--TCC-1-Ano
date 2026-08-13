@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.img_inicio {
+    display: flex;
+    justify-content: center;
+}
+
+.img_inicio img {
+    height: 100px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 30px;
+}
+
+header nav svg{
+    fill: black;
+    width: 30px;
+    height: 30px;
+}
+header svg{
+ fill: black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.lado_esquerdo img{
+width: 100%;          
+max-width: 60px;     
+aspect-ratio: 1 / 1;  
+ object-fit: cover;
+ object-position: 0px -1px;    
+border-radius: 50%;
+border: solid 3px black;
+
+}
