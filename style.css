@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     background-color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -27,38 +29,113 @@ header {
 
 header nav {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 30px;
 }
 
-header nav svg{
+header nav svg {
     fill: black;
     width: 30px;
     height: 30px;
 }
-header svg{
- fill: black;
+
+header svg {
+    fill: black;
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
-.lado_esquerdo img{
-width: 100%;          
-max-width: 60px;     
-aspect-ratio: 1 / 1;  
- object-fit: cover;
- object-position: 0px -1px;    
-border-radius: 50%;
-border: solid 3px black;
+
+.lado_esquerdo img {
+    width: 100%;
+    max-width: 60px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 0px -1px;
+    border-radius: 50%;
+    border: solid 3px black;
 
 }
-.principal{
+
+.principal {
     display: flex;
     justify-content: center;
-    
+
 }
-.principal img{
-margin-top: 20px;
+
+.principal img {
+    margin-top: 20px;
     border-radius: 40px;
     width: 174vh;
+}
+
+.introducao img {
+    width: 300px;
+}
+
+.introducao {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.introducao h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 125px;
+    letter-spacing: 20px;
+}
+.introducao_h2{
+    color: #2F6BFF;
+    letter-spacing: 25px;
+    text-align: center;
+    font-size: 40px;
+}
+.introducao_marcas{
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin-top: 40px;
+}
+.logo img{
+    width: 275px;
+}
+.titulo_produtos h2{
+    color: white;
+    margin-left: 50px;
+    font-size: 45px;
+}
+.titulo_produtos svg{
+    color: #2F6BFF;
+    width: 50px;
+    height: auto;
+}
+.fileira_produtos{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.card img{
+    width: 100%;
+    border-radius: 8px;
+}
+.card{
+    width: 300px;
+    height: 480px;
+    background-color: #0d0d0d; 
+    border: 1px solid #222222; 
+    padding: 24px;
+    transition: 0.5s;
+    border-radius: 14px;
+}
+.card h2,h3{
+    color: white;
+    text-align: center;
+}
+.card:hover{
+    transform: translateY(-7px);
+    transition: 0.5;
+    border: 2px solid #2F6BFF;
 }
