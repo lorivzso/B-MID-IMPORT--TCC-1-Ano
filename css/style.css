@@ -81,9 +81,10 @@ header svg {
 }
 
 .introducao {
-    gap: 20px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 20px; /* Espaço entre a borboleta, o X e a Nike */
 }
 
 .introducao h2 {
@@ -286,10 +287,11 @@ footer img {
     font-size: 12px;
     text-align: center;
 }
-.categorias{
+.categorias {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 20px;
 }
 .cat1 {
     position: relative;
@@ -331,4 +333,19 @@ footer img {
 }
 .img_inicio2{
     width: 200px;
+    padding: 10px;
+}
+img.nike_logo {
+    max-width: 1950px; 
+    height: auto;
+}
+.corteiz_logo{
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+.syna_logo{
+     width: 165px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
 }
