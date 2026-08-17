@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+main {
+    flex: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.img_inicio {
+    display: flex;
+    justify-content: center;
+}
+
+.img_inicio img {
+    height: 100px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+header nav svg {
+    fill: black;
+    width: 30px;
+    height: 30px;
+}
+
+header svg {
+    fill: black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.lado_esquerdo img {
+    width: 100%;
+    max-width: 60px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 0px -1px;
+    border-radius: 50%;
+    border: solid 3px black;
+
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+
+}
+
+.principal img {
+    margin-top: 60px;
+    border-radius: 40px;
+    width: 170vh;
+}
+
+.introducao img {
+    width: 300px;
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espaço entre a borboleta, o X e a Nike */
+}
+
+.introducao h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 125px;
+    letter-spacing: 20px;
+}
+
+.introducao_h2 {
+    color: #2F6BFF;
+    letter-spacing: 25px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.introducao_marcas {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin-top: 40px;
+}
+
+.logo img {
+    width: 250px;
+
+}
+
+.logo {
+    transition: 0.6s;
+}
+
+.logo:hover {
+    transform: translateY(-10px);
+    padding: 5px;
+    transition: 0.6s;
+}
+
+.titulo_produtos h2 {
+    color: white;
+    margin-left: 50px;
+    font-size: 38px;
+}
+
+.titulo_produtos svg {
+    color: #2F6BFF;
+    width: 45px;
+    height: auto;
+}
+
+.fileira_produtos {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card {
+    width: 220px;
+    height: 380px;
+    background-color: #0d0d0d;
+    border: 1px solid #222222;
+    padding: 24px;
+    transition: 0.5s;
+    border-radius: 14px;
+}
+
+.card h2,
+h3, a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    transition: 0.5;
+    border: 1px solid #2F6BFF;
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-top: 1px solid white;
+}
+
+.foot-top {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer img {
+    width: 80px;
+    height: auto;
+}
+
+.foot-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.foot1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.foot1 p {
+    color: gray;
+    max-width: 280px;
+    margin-top: 10px;
+}
+
+.foot2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.foot2 p {
+    margin: 5px; 
+}
+
+.foot2 h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px; 
+}
+
+.foot2 a {
+    font-size: 15px;
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.foot2 a:hover {
+    color: #fff;
+}
+
+.foot-bottom {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.guia-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.divisor {
+    border: 0;
+    border-top: 1px solid #222;
+    margin: 20px 0;
+}
+
+.meios-pagamento {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.meios-pagamento span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bandeiras {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.bandeiras img {
+    height: 20px;
+    width: 32px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.copyright {
+    margin-top: 30px;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.cat1 {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    background-color: #222222;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+.cat1:hover{
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+.cat1 img {
+    width: 100%; 
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 5%;
+}
+
+.cat1 h2 {
+    position: absolute;
+    color: white;
+    text-shadow: 0px 3px 7px #222222;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+.titulo{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.img_inicio2{
+    width: 200px;
+    padding: 10px;
+}
+img.nike_logo {
+    max-width: 1950px; 
+    height: auto;
+}
+.corteiz_logo{
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+.syna_logo{
+     width: 165px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+}
