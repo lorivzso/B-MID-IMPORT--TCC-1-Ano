@@ -84,7 +84,8 @@ header svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Espaço entre a borboleta, o X e a Nike */
+    gap: 20px;
+    /* Espaço entre a borboleta, o X e a Nike */
 }
 
 .introducao h2 {
@@ -109,20 +110,7 @@ header svg {
     margin-top: 40px;
 }
 
-.logo img {
-    width: 250px;
 
-}
-
-.logo {
-    transition: 0.6s;
-}
-
-.logo:hover {
-    transform: translateY(-10px);
-    padding: 5px;
-    transition: 0.6s;
-}
 
 .titulo_produtos h2 {
     color: white;
@@ -159,7 +147,8 @@ header svg {
 }
 
 .card h2,
-h3, a{
+h3,
+a {
     color: white;
     text-align: center;
     text-decoration: none;
@@ -218,13 +207,13 @@ footer img {
 
 
 .foot2 p {
-    margin: 5px; 
+    margin: 5px;
 }
 
 .foot2 h3 {
     font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
 }
 
 .foot2 a {
@@ -290,12 +279,14 @@ footer img {
     font-size: 12px;
     text-align: center;
 }
+
 .categorias {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
 }
+
 .cat1 {
     position: relative;
     display: inline-block;
@@ -305,12 +296,14 @@ footer img {
     border-radius: 5%;
     transition: 0.5s;
 }
-.cat1:hover{
+
+.cat1:hover {
     transition: 0.5s;
     transform: translateY(-5px);
 }
+
 .cat1 img {
-    width: 100%; 
+    width: 100%;
     display: block;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -329,26 +322,77 @@ footer img {
     text-align: center;
     width: 100%;
 }
-.titulo{
+
+.titulo {
     color: white;
     font-size: 30px;
     text-align: center;
 }
-.img_inicio2{
+
+.img_inicio2 {
     width: 200px;
     padding: 10px;
 }
+
 img.nike_logo {
-    max-width: 1950px; 
+    max-width: 1950px;
     height: auto;
 }
-.corteiz_logo{
+
+.corteiz_logo {
     width: 200px;
     height: auto;
     padding: 10px;
 }
-.syna_logo{
-     width: 165px;
+
+.syna_logo {
+    width: 165px;
     height: 150px;
     aspect-ratio: 1 / 1;
+}
+
+.img_atras {
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: 105%; 
+    width: 400px;
+    height: 250px;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    transition: background-size 0.5s ease, border-color 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+    opacity: 0.65;
+    filter: blur(0.7px);
+}
+
+.img_atras:hover {
+    background-size: 97%;
+    border-color: #ccc;
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.logo_n,
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease;
+}
+
+.logo_n img,
+.logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.bg-corteiz {
+    background-image: url(/imagens/corteiz_logo_banner.jpg);
+}
+
+.bg-syna {
+    background-image: url(https://highxtar.com/wp-content/uploads/2025/12/thumb-nike-syna-world-1440x1080.jpg);
+    
 }
