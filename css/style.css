@@ -74,6 +74,7 @@ header svg {
 
 .introducao img {
     width: 200px;
+    filter: drop-shadow(0px 2px 3px #2F6BFF);
 }
 
 .introducao {
@@ -93,17 +94,17 @@ header svg {
 
 .introducao_h2 {
     color: #2F6BFF;
-    letter-spacing: 25px;
+    letter-spacing: 20px;
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 
 .introducao_marcas {
     display: flex;
     justify-content: center;
-    gap: 75px;
-    margin-top: 40px;
+    gap: 30px;
+    margin-top: 10px;
 }
 .titulo_produtos h2 {
     text-align: center;
@@ -325,14 +326,20 @@ footer img {
     text-align: center;
 }
 
-.img_inicio2 {
-    width: 200px;
-    padding: 10px;
+.img_inicio2  img{
+    width: 100px;
+    height: auto;
 }
 
 img.nike_logo {
     max-width: 1950px;
     height: auto;
+}
+.img_inicio3{
+    width: 150px;
+    height: auto;
+    padding: 8px;
+    
 }
 
 .corteiz_logo {
@@ -351,9 +358,9 @@ img.nike_logo {
     position: relative;
     background-image: url(https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
-    background-size: 105%; 
+    background-size: 110% 110%; 
     width: 350px;
-    height: 210px;
+    height: 230px;
     border: 1px solid #222222;
     border-radius: 5px;
     transition: background-size 0.5s ease, border-color 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
@@ -362,7 +369,7 @@ img.nike_logo {
 }
 
 .img_atras:hover {
-    background-size: 97%;
+    background-size: 100% 100%; 
     border-color: #ccc;
     opacity: 1;
     filter: blur(0px);
@@ -391,4 +398,8 @@ img.nike_logo {
 .bg-syna {
     background-image: url(https://highxtar.com/wp-content/uploads/2025/12/thumb-nike-syna-world-1440x1080.jpg);
     
+}
+.corteiz_logo{
+    width: 200px;
+    height: auto;
 }
