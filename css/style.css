@@ -20,8 +20,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 .img_inicio {
@@ -67,13 +65,11 @@ header svg {
 .principal {
     display: flex;
     justify-content: center;
-
+    border-bottom: solid 1px #ccc;
 }
 
 .principal img {
-    margin-top: 60px;
-    border-radius: 40px;
-    width: 170vh;
+    width: 100%;
 }
 
 .introducao img {
@@ -102,6 +98,7 @@ header svg {
     font-size: 26px;
 }
 
+
 .introducao_marcas {
     display: flex;
     justify-content: center;
@@ -109,6 +106,7 @@ header svg {
     margin-top: 40px;
 }
 .titulo_produtos h2 {
+    text-align: center;
     color: white;
     margin-left: 50px;
     font-size: 28px;
