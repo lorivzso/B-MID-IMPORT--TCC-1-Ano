@@ -463,7 +463,12 @@ img.nike_logo {
     user-select: none;
     transition: 0.2s;
 }
-
+.button_cart{
+    background-color:#555555;
+    box-shadow: 0px 0px 0px 0px;
+    width: 50%;
+    margin-left: 10.5%;
+}
 .buttons:hover {
     border-color: #2F6BFF;
 }
@@ -490,6 +495,7 @@ button{
     border-style: none;
     box-shadow: 0px 0px 2px 1px #2F6BFF;
     transition: 0.7s;
+    display: block;
 }
 button a{
     color: #fff;
@@ -538,6 +544,7 @@ button:hover {
     color: white;
     margin-left: 40px;
     letter-spacing: 2px;
+    
 }
 /* isso ak foi o claude ta? nunca que eu ia me dar o esforço de adicionar uma
 bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o .avisoskkkkkkk */
