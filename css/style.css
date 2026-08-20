@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* bro, vou tentar colocar algumas anotações, maaaas, nao vou explicar tudo
+sao literal 500 linhas de codigos (até agora, dia 19/08) */
 main {
     flex: 1;
 }
@@ -13,7 +14,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+/* ============================
+   HEADER / NAVEGAÇÃO
+   ============================ */
 header {
     background-color: white;
     display: flex;
@@ -35,15 +38,21 @@ header {
 header nav {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
 }
+nav ul{
+    display: flex;
+    gap: 15px;
+}
+nav ul li{
+    color: #fff; 
 
+}
 header nav svg {
     fill: black;
     width: 30px;
     height: 30px;
 }
-
+/* esse svg é os icones da casinha, login etc */
 header svg {
     fill: black;
     width: 30px;
@@ -61,7 +70,9 @@ header svg {
     border: solid 3px black;
 
 }
-
+/* ============================
+   BANNER PRINCIPAL (pág. inicial)
+   ============================ */
 .principal {
     display: flex;
     justify-content: center;
@@ -106,6 +117,7 @@ header svg {
     gap: 30px;
     margin-top: 10px;
 }
+
 .titulo_produtos h2 {
     text-align: center;
     color: white;
@@ -125,7 +137,9 @@ header svg {
     gap: 60px;
     margin-bottom: 30px;
 }
-
+/* ============================
+   CARDS DE PRODUTO (Mais Vendidos, chegando agora etc)
+   ============================ */
 .card img {
     object-fit: cover;
     aspect-ratio: 1 / 1;
@@ -144,19 +158,20 @@ header svg {
 }
 
 .card h2,
-h3,
-a {
+.card h3 {
     color: white;
     text-align: center;
     text-decoration: none;
 }
-
+.fileira_produtos a {
+    text-decoration: none;
+}
 .card:hover {
     transform: translateY(-7px);
     transition: 0.5;
     border: 1px solid #2F6BFF;
 }
-
+/* fim do card, começo do rodapé */
 footer {
     background-color: #0a0a0a;
     color: white;
@@ -276,7 +291,8 @@ footer img {
     font-size: 12px;
     text-align: center;
 }
-
+/* fim do rodapé, essas categoiras é das paginas das marcas
+(nike, corteiz, syna) */
 .categorias {
     display: flex;
     justify-content: center;
@@ -326,7 +342,7 @@ footer img {
     text-align: center;
 }
 
-.img_inicio2  img{
+.img_inicio2 img {
     width: 100px;
     height: auto;
 }
@@ -335,11 +351,12 @@ img.nike_logo {
     max-width: 1950px;
     height: auto;
 }
-.img_inicio3{
+
+.img_inicio3 {
     width: 150px;
     height: auto;
     padding: 8px;
-    
+
 }
 
 .corteiz_logo {
@@ -353,12 +370,13 @@ img.nike_logo {
     height: 150px;
     aspect-ratio: 1 / 1;
 }
-
+/* parte das imagems das marcas na pag princ */
 .img_atras {
     position: relative;
+    /* BRO, esse aqui é o link da imagem da nike */
     background-image: url(https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
-    background-size: 110% 110%; 
+    background-size: 110% 125%;
     width: 350px;
     height: 230px;
     border: 1px solid #222222;
@@ -369,12 +387,12 @@ img.nike_logo {
 }
 
 .img_atras:hover {
-    background-size: 100% 100%; 
+    background-size: 100% 115%;
     border-color: #ccc;
     opacity: 1;
     filter: blur(0px);
 }
-
+/* eu esqueci oque é isso também, acho que é da logo que tem nas imagenskkkkkkkkkkkkk */
 .logo_n,
 .logo {
     position: absolute;
@@ -390,16 +408,214 @@ img.nike_logo {
     height: auto;
     display: block;
 }
-
+/* BRO, esse aqui é o link da imagem da corteiz */
 .bg-corteiz {
     background-image: url(../imagens/corteiz_logo_banner.jpg);
 }
-
+/* BRO, esse aqui é o link da imagem da syna*/
 .bg-syna {
     background-image: url(https://highxtar.com/wp-content/uploads/2025/12/thumb-nike-syna-world-1440x1080.jpg);
-    
+
 }
-.corteiz_logo{
+
+.corteiz_logo {
     width: 200px;
     height: auto;
+}
+/* ============================
+   PÁGINA DE COMPRA (produto)
+   ============================ */
+.compra {
+    display: flex;
+    justify-content: center;
+}
+
+.img_produto img{
+    margin-top: 40px;
+    max-width: 560px;
+    border-radius: 14px;
+}
+
+.botoes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 130px;
+}
+
+.botoes input[type="radio"] {
+    display: none;
+}
+
+.buttons{
+    background-color: #222;
+    width: 2px;
+    height: 2px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.buttons:hover {
+    border-color: #2F6BFF;
+}
+
+.botoes input[type="radio"]:checked+.buttons {
+    background-color: #2F6BFF;
+    border-color: #2F6BFF;
+    color: #fff;
+}
+
+.buttons:active {
+    transform: scale(0.93);
+}
+
+button{
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+   max-width: 400px;
+    background-color: #2F6BFF;
+    border-style: none;
+    box-shadow: 0px 0px 2px 1px #2F6BFF;
+    transition: 0.7s;
+}
+button a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+button:hover {
+    background-color: #1D4ED8;
+    transition: 0.7s;
+}
+
+.img_produto{
+    display: flex;
+    gap: 10px 40px;
+}
+.img_princ h2{
+    color: #fff;
+}
+.img_produto h2 {
+    color: white;
+    text-transform: capitalize;
+}
+
+.img_produto p {
+    color: white;
+    max-width: 560px;
+}
+.img_pequenas {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.img_pequenas img{
+    max-width: 90px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transform: scale(1.5);
+    border-radius: 8px;
+}
+.especif {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 40px;
+    letter-spacing: 2px;
+}
+/* isso ak foi o claude ta? nunca que eu ia me dar o esforço de adicionar uma
+bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o .avisoskkkkkkk */
+.especif ul {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.especif ul li {
+    position: relative;
+    padding-left: 10px;
+}
+
+.especif ul li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #2F6BFF;
+}
+/* fim da parte do claude da lista */
+.especif h1 {
+    font-size: 46px;
+    margin: 0;
+}
+
+.preco {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.preco h2 {
+    font-size: 30px;
+    color: #ccc;
+    margin: 0;
+}
+
+.descontos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.preco h3 {
+    text-decoration: line-through;
+    color: rgb(3, 248, 3);
+    font-size: 20px;
+    margin: 0;
+}
+
+.preco h3.desconto {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 14px;
+    margin: 0;
+}
+.svg_titulo{
+    display: flex;
+    gap: 10px 10px;
+}
+.svg_titulo svg{
+    height: 20px;
+    width: 20px;
+}
+.svg_titulo p strong{
+    font-size: 15px;
+}
+.avisos{
+    margin-top: 20px;
+}
+.aviso p {
+    color: #ccc;
+    font-size: 13px;
+    margin: 0 0 10px 0;
+    max-width: 400px;
 }
