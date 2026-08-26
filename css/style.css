@@ -315,6 +315,7 @@ footer img {
     position: relative;
     display: inline-block;
     width: 200px;
+    height: 205x;
     padding: 5px;
     background-color: #222222;
     border-radius: 5%;
@@ -350,10 +351,11 @@ footer img {
     font-weight: 730;
     font-size: 20px;
 }
+
 .linha {
     position: absolute;
     background-color: #2F6BFF;
-    bottom: 6.5px;
+    bottom: -5px;
     left: 75px;
     width: 50px;
     height: 2px;
@@ -364,6 +366,7 @@ footer img {
     width: 65px;
     left: 67px;
 }
+
 .titulo {
     color: white;
     font-size: 30px;
@@ -410,7 +413,7 @@ img.nike_logo {
     background-position: center;
     background-size: 110% 120%;
     width: 420px;
-    height: 360px;
+    height: 320px;
     border: 1px solid #222222;
     border-radius: 5px;
     transition: background-size 0.5s ease, border-color 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
@@ -674,6 +677,7 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     margin: 0 0 10px 0;
     max-width: 400px;
 }
+
 form {
     margin: 70px auto;
     display: flex;
@@ -686,13 +690,26 @@ form {
     border-radius: 14px;
 }
 
-input{
+input {
     margin-top: 5px;
     width: 30%;
     padding: 10px;
 }
+
 label {
     display: block;
     width: 30%;
     text-align: left;
+}
+
+.banner_speed img {
+    width: 65%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.banner_speed {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
