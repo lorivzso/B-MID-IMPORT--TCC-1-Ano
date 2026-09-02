@@ -311,7 +311,7 @@ footer img {
     margin-top: 20px;
 }
 
-.cat1 {
+.cat {
     position: relative;
     display: inline-block;
     width: 200px;
@@ -324,12 +324,12 @@ footer img {
     transition: 0.5s;
 }
 
-.cat1:hover {
+.cat:hover {
     border-color: #2F6BFF;
     transform: translateY(-4px);
 }
 
-.cat1 img {
+.cat img {
     width: 100%;
     display: block;
     aspect-ratio: 1 / 1;
@@ -338,8 +338,9 @@ footer img {
     border-radius: 5%;
 }
 
-.cat1 h2 {
+.cat h2 {
     position: absolute;
+    width: 100%;
     color: white;
     text-shadow: 2px 3px 7px #222222;
     left: 50%;
@@ -351,7 +352,6 @@ footer img {
     font-weight: 730;
     font-size: 20px;
 }
-
 .linha {
     position: absolute;
     background-color: #2F6BFF;
@@ -362,7 +362,7 @@ footer img {
     transition: 0.5s;
 }
 
-.cat1:hover .linha {
+.cat:hover .linha {
     width: 65px;
     left: 67px;
 }
@@ -412,7 +412,7 @@ img.nike_logo {
     background-image: url(https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
     background-size: 110% 120%;
-    width: 420px;
+    width: 470px;
     height: 320px;
     border: 1px solid #222222;
     border-radius: 5px;
@@ -525,7 +525,7 @@ button {
     margin-top: 15px;
     text-align: center;
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 15px;
     width: 100%;
     max-width: 400px;
     background-color: #2F6BFF;
@@ -533,14 +533,9 @@ button {
     box-shadow: 0px 0px 2px 1px #2F6BFF;
     transition: 0.7s;
     display: block;
-}
-
-button a {
     color: #fff;
-    text-decoration: none;
-    display: block;
+    margin-left: 7px;
 }
-
 button:hover {
     background-color: #1D4ED8;
     transition: 0.7s;
@@ -680,23 +675,35 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
 
 form {
     margin: 70px auto;
-    display: flex;
+    margin-left: 40px;
+    display: inline-flex;
     flex-direction: column;
-    align-items: center;
     color: #fff;
-    background-color: #222222;
-    border: 1px solid #1D4ED8;
+    background-color: #0a0a0a;
     padding: 10px;
     border-radius: 14px;
+    width: 550px;
+    height: auto;
 }
 
 input {
+    margin-left: 7px;
     margin-top: 5px;
-    width: 30%;
+    width: 75%;
     padding: 10px;
 }
-
+form p a{
+    color: #fff;
+    text-decoration-color: #2F6BFF;
+}
+form p{
+    color: #fff;
+    text-align: center;
+}
 label {
+    margin-bottom: 5px;
+    margin-top: 4px;
+    margin-left: 7px;
     display: block;
     width: 30%;
     text-align: left;
@@ -712,4 +719,51 @@ label {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+.cards_avisos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.card_aviso{
+    width: 26%;
+    height: 240px;
+    background-color: #0a0a0a;
+    border: 1px solid #2F6BFF;
+    display: flex;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.svg_card{
+    width: 180px;
+    height: auto;
+    color: #2F6BFF;
+    margin-left: 10px;
+}
+.card_aviso article {
+    flex: 1;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: #fff;
+}
+.card_aviso article h2 {
+    font-size: 32px;
+    max-width: 100%;
+    margin: 15px 0 8px 0;
+}
+.card_aviso article p {
+    font-size: 22px;
+    max-width: 90%;
+    margin: 0;
+}
+.card_aviso:hover{
+    transform: translateY(-5px);
+    transition: 0.4s;
+}
+.banner_frete{
+    display: flex;
+    justify-content: center;
+}
+.banner_frete img{
+    width: 65%;
 }
