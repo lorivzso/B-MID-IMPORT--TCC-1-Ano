@@ -176,7 +176,6 @@ header svg {
     margin: 14px 0 6px;
     min-height: 2.6em;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
@@ -403,6 +402,7 @@ footer img {
 .img_inicio2 img {
     width: 100px;
     height: auto;
+    scale: 1.2;
 }
 
 img.nike_logo {
