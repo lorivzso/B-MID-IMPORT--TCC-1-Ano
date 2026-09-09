@@ -2,10 +2,16 @@
 
 /* bro, vou tentar colocar algumas anotações, maaaas, nao vou explicar tudo
 sao literal 500 linhas de codigos (até agora, dia 19/08) */
+
+/* main ocupa todo o espaço vertical sobrando entre header e footer,
+   assim o footer sempre fica colado embaixo (nunca "flutuando" no meio
+   da tela em páginas com pouco conteúdo) */
 main {
     flex: 1;
 }
 
+/* body inteiro é flex-column: header em cima, main no meio, footer embaixo,
+   um empilhado sobre o outro, ocupando a tela toda (min-height: 100vh) */
 body {
     margin: 0;
     padding: 0;
@@ -19,6 +25,10 @@ body {
 /* ============================
    HEADER / NAVEGAÇÃO
    ============================ */
+
+/* barra branca do topo. position: relative é o que permite a logo
+   (.img_inicio) se posicionar em absolute e centralizar de verdade,
+   sem depender do tamanho dos outros elementos dos lados */
 header {
     background-color: white;
     position: relative;
@@ -28,6 +38,8 @@ header {
     padding: 10px;
 }
 
+/* logo do header. Sai do fluxo normal (absolute) e centraliza sempre
+   no meio exato do header, não importa quantos ícones tem de cada lado */
 .img_inicio {
     position: absolute;
     left: 50%;
@@ -39,11 +51,13 @@ header {
     width: auto;
 }
 
+/* empurra a lista de ícones (nav) pro lado direito do header */
 header nav {
     display: flex;
     justify-content: flex-end;
 }
 
+/* lista dos ícones (casinha, carrinho, perfil etc) lado a lado */
 nav ul {
     list-style: none;
     display: flex;
@@ -70,6 +84,8 @@ header svg {
     cursor: pointer;
 }
 
+/* foto de perfil redonda que aparece no canto esquerdo do header
+   (usada em algumas páginas, tipo carrinho.html) */
 .lado_esquerdo img {
     width: 100%;
     max-width: 60px;
@@ -84,6 +100,8 @@ header svg {
 /* ============================
    BANNER PRINCIPAL (pág. inicial)
    ============================ */
+
+/* container do banner grande do topo da página inicial */
 .principal {
     display: flex;
     justify-content: center;
@@ -98,6 +116,7 @@ header svg {
     width: 200px;
 }
 
+/* logo + texto "B-MID IMPORT" lado a lado, logo abaixo do banner principal */
 .introducao {
     display: flex;
     align-items: center;
@@ -113,6 +132,7 @@ header svg {
     letter-spacing: 20px;
 }
 
+/* texto tipo "JUST DO IT" / nome da categoria da página (ex: "AIR FORCE") */
 .introducao_h2 {
     color: #2F6BFF;
     letter-spacing: 20px;
@@ -128,6 +148,7 @@ header svg {
     margin-top: 10px;
 }
 
+/* título de cada seção de produtos, tipo "Mais Vendidos" / "Chegando Agora" */
 .titulo_produtos h2 {
     text-align: center;
     color: white;
@@ -141,6 +162,7 @@ header svg {
     height: auto;
 }
 
+/* cada linha horizontal de produtos (4 cards lado a lado) */
 .fileira_produtos {
     display: flex;
     justify-content: center;
@@ -158,6 +180,9 @@ header svg {
     border-radius: 8px;
 }
 
+/* card individual do produto. min-height (em vez de height fixo) +
+   flex-direction: column é o que permite o preço (h3) sempre ficar
+   grudado no rodapé do card, mesmo quando o título (h2) tem 1 ou 2 linhas */
 .card {
     width: 270px;
     min-height: 360px;
@@ -165,24 +190,29 @@ header svg {
     flex-direction: column;
     background-color: #0d0d0d;
     border: 1px solid #222222;
-    padding: 24px;
+    padding: 10px 15px;
     transition: 0.5s;
     border-radius: 14px;
 }
 
+/* título do produto. min-height + line-clamp: 2 garante que todo card
+   reserva o mesmo espaço de título (2 linhas), mesmo se o nome do
+   produto for curto ("Air force 1") ou longo (quebra em 2 linhas e
+   corta o resto com "...") — assim os cards ficam alinhados entre si */
 .card h2 {
     font-size: 20px;
     font-weight: 600;
     margin: 14px 0 6px;
     min-height: 2.6em;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
     color: white;
 }
 
+/* preço do produto. margin-top: auto empurra ele pro fundo do card
+   (só funciona porque o .card é flex-direction: column) */
 .card h3 {
     font-size: 18px;
     margin-top: auto;
@@ -195,6 +225,7 @@ header svg {
     text-decoration: none;
 }
 
+/* hover do card: sobe um pouco e a borda fica azul */
 .card:hover {
     transform: translateY(-7px);
     transition: 0.5s;
@@ -212,6 +243,8 @@ footer {
     border-top: 1px solid white;
 }
 
+/* linha de cima do footer: logo/descrição + Categorias + Departamentos
+   lado a lado */
 .foot-top {
     display: flex;
     justify-content: space-around;
@@ -230,6 +263,7 @@ footer img {
     margin-top: 20px;
 }
 
+/* bloco da esquerda do footer: logo + nome da loja + descrição */
 .foot1 {
     display: flex;
     flex-direction: column;
@@ -241,6 +275,7 @@ footer img {
     margin-top: 10px;
 }
 
+/* usado tanto pra "Categorias" quanto "Departamentos" no footer */
 .foot2 {
     display: flex;
     flex-direction: column;
@@ -269,6 +304,7 @@ footer img {
     color: #fff;
 }
 
+/* linha de baixo do footer: linha divisória + meios de pagamento + copyright */
 .foot-bottom {
     margin-top: 40px;
     width: 100%;
@@ -306,6 +342,7 @@ footer img {
     align-items: center;
 }
 
+/* ícones de visa/mastercard/etc, com fundo branco pra destacar no footer escuro */
 .bandeiras img {
     height: 20px;
     width: 32px;
@@ -322,8 +359,11 @@ footer img {
     text-align: center;
 }
 
-/* fim do rodapé, essas categoiras é das paginas das marcas
-(nike, corteiz, syna) */
+/* ============================
+   CATEGORIAS (Camisas / Tênis / Conjuntos / Fleece etc)
+   essas categorias também são usadas nas páginas das marcas
+   (nike, corteiz, syna)
+   ============================ */
 .categorias {
     display: flex;
     justify-content: center;
@@ -331,6 +371,9 @@ footer img {
     margin-top: 20px;
 }
 
+/* card individual de categoria. border transparente (em vez de "sem
+   border") + box-sizing: border-box evita que o card "cresça" no hover
+   quando a borda azul aparece — a borda já reserva o espaço desde o início */
 .cat {
     position: relative;
     display: inline-block;
@@ -358,6 +401,10 @@ footer img {
     border-radius: 5%;
 }
 
+/* nome da categoria flutuando por cima da imagem, perto do rodapé do card.
+   width: 100% é essencial aqui: sem isso a caixa do h2 fica só com metade
+   da largura do card (por causa do left: 50%) e o texto quebra em 2 linhas
+   à toa mesmo tendo espaço sobrando */
 .cat h2 {
     position: absolute;
     width: 100%;
@@ -373,6 +420,8 @@ footer img {
     font-size: 20px;
 }
 
+/* linha azul embaixo do nome da categoria (feita como div de verdade
+   no HTML, não como ::before) — no hover ela cresce um pouco */
 .linha {
     position: absolute;
     background-color: #2F6BFF;
@@ -388,6 +437,7 @@ footer img {
     left: 67px;
 }
 
+/* título "Categorias" que fica acima dos cards */
 .titulo {
     color: white;
     font-size: 30px;
@@ -432,7 +482,15 @@ img.nike_logo {
     aspect-ratio: 1 / 1;
 }
 
-/* parte das imagems das marcas na pag princ */
+/* ============================
+   BANNERS DAS MARCAS (usados na página inicial: Nike / Corteiz / Syna)
+   ============================ */
+
+/* parte das imagems das marcas na pag princ.
+   background-size maior que 100% + hover reduzindo faz o efeito de
+   "zoom out" suave ao passar o mouse (a imagem começa mais zoomada e
+   afasta no hover). blur(0.7px) parado dá uma leve suavizada, que some
+   no hover (blur(0px)) */
 .img_atras {
     position: relative;
     /* BRO, esse aqui é o link da imagem da nike */
@@ -455,7 +513,8 @@ img.nike_logo {
     filter: blur(0px);
 }
 
-/* eu esqueci oque é isso também, acho que é da logo que tem nas imagenskkkkkkkkkkkkk */
+/* eu esqueci oque é isso também, acho que é da logo que tem nas imagenskkkkkkkkkkkkk
+   (logo da marca centralizada por cima do .img_atras) */
 .logo_n,
 .logo {
     position: absolute;
@@ -498,6 +557,7 @@ img.nike_logo {
     border-radius: 14px;
 }
 
+/* linha de botões de tamanho (P/M/G etc) + botão do carrinho */
 .botoes {
     margin-top: 30px;
     display: flex;
@@ -506,10 +566,13 @@ img.nike_logo {
     margin-right: 130px;
 }
 
+/* esconde o input radio de verdade, só o label estilizado (.buttons)
+   fica visível — truque clássico de "botão de rádio customizado" */
 .botoes input[type="radio"] {
     display: none;
 }
 
+/* aparência de cada botão de tamanho */
 .buttons {
     background-color: #222;
     width: 2px;
@@ -537,6 +600,8 @@ img.nike_logo {
     border-color: #2F6BFF;
 }
 
+/* quando o radio escondido é marcado, o label (.buttons) logo depois
+   dele vira azul — é assim que o "tamanho selecionado" é destacado */
 .botoes input[type="radio"]:checked+.buttons {
     background-color: #2F6BFF;
     border-color: #2F6BFF;
@@ -547,6 +612,7 @@ img.nike_logo {
     transform: scale(0.93);
 }
 
+/* botão principal (tipo "Comprar" / "Entrar" / "Ver Produtos" do carrinho vazio) */
 button {
     cursor: pointer;
     margin-top: 15px;
@@ -593,6 +659,8 @@ button a {
     max-width: 560px;
 }
 
+/* miniaturas da galeria de fotos do produto (fica em coluna do lado
+   da foto principal) */
 .img_pequenas {
     margin-top: 24px;
     display: flex;
@@ -609,6 +677,7 @@ button a {
     border-radius: 8px;
 }
 
+/* bloco de especificações do produto (lista de características) */
 .especif {
     margin-top: 50px;
     display: flex;
@@ -620,7 +689,8 @@ button a {
 }
 
 /* isso ak foi o claude ta? nunca que eu ia me dar o esforço de adicionar uma
-bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o .avisoskkkkkkk */
+bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o .avisoskkkkkkk
+   (bolinha azul customizada no lugar do marcador padrão da <li>) */
 .especif ul {
     list-style: none;
     margin: 15px 0;
@@ -649,6 +719,7 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     margin: 0;
 }
 
+/* linha do preço: valor atual + valor antigo riscado, lado a lado */
 .preco {
     display: flex;
     align-items: baseline;
@@ -668,6 +739,7 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     align-items: flex-start;
 }
 
+/* preço "de", riscado */
 .preco h3 {
     text-decoration: line-through;
     color: rgb(3, 248, 3);
@@ -675,6 +747,7 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     margin: 0;
 }
 
+/* texto pequeno do desconto (ex: "10% off"), sem risco */
 .preco h3.desconto {
     text-decoration: none;
     color: #7e7e7e;
@@ -682,6 +755,7 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     margin: 0;
 }
 
+/* ícone + texto de avisos (ex: "frete grátis", "compra segura") */
 .svg_titulo {
     display: flex;
     gap: 10px 10px;
@@ -707,6 +781,9 @@ bolinha propria da lista e pintar ela, eu so tinha pedido pra ele alinhar com o 
     max-width: 400px;
 }
 
+/* ============================
+   FORMULÁRIOS (login / cadastro)
+   ============================ */
 form {
     margin: 70px auto;
     margin-left: 40px;
@@ -746,6 +823,9 @@ label {
     text-align: left;
 }
 
+/* ============================
+   BANNERS SECUNDÁRIOS (dentro das páginas de categoria)
+   ============================ */
 .banner_speed img {
     width: 65%;
     height: auto;
@@ -758,6 +838,8 @@ label {
     margin-top: 50px;
 }
 
+/* linha dos 3 cards de aviso na página inicial (ex: "frete grátis",
+   "compra segura", "troca fácil") */
 .cards_avisos {
     display: flex;
     justify-content: center;
@@ -781,6 +863,8 @@ label {
     margin-left: 10px;
 }
 
+/* flex: 1 faz o texto ocupar todo o espaço que sobra ao lado do ícone,
+   em vez de ficar "grudado" à esquerda com um vão vazio à direita */
 .card_aviso article {
     flex: 1;
     margin-top: 30px;
@@ -805,6 +889,7 @@ label {
     transition: 0.4s;
 }
 
+/* banner de frete grátis (imagem única, centralizada) */
 .banner_frete {
     display: flex;
     justify-content: center;
@@ -814,14 +899,24 @@ label {
     width: 65%;
 }
 
+/* ============================
+   TRANSIÇÃO ENTRE PÁGINAS (View Transitions API)
+   navigation: auto ativa a transição automática ao clicar em links
+   internos do site — funciona em Chrome/Edge/Safari recentes, e é
+   ignorado (sem quebrar nada) em navegadores que não suportam ainda
+   ============================ */
 @view-transition {
     navigation: auto;
 }
 
+/* animação da página que está SAINDO: borra, escurece um pouco e
+   dá um leve zoom antes de sumir */
 ::view-transition-old(root) {
     animation: blur-out-bmid 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+/* animação da página que está ENTRANDO: começa borrada/escura/menor
+   e volta ao normal */
 ::view-transition-new(root) {
     animation: blur-in-bmid 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
@@ -854,12 +949,18 @@ label {
     }
 }
 
+/* ============================
+   CARRINHO DE COMPRAS
+   ============================ */
+
+/* container geral da página do carrinho */
 .cart {
     background-color: #0a0a0a;
     text-align: center;
     padding: 35px;
 }
 
+/* caixa de aviso "Seu carrinho está vazio!" */
 .cart h2 {
     border: 1px solid #fff;
     color: white;
@@ -869,6 +970,7 @@ label {
     border-radius: 8px;
 }
 
+/* botão "Ver Produtos" */
 .cart h3 a {
     display: inline-block;
     background-color: #2F6BFF;
@@ -890,6 +992,7 @@ label {
     font-weight: 300;
 }
 
+/* título "Carrinho de compra" + ícone do carrinho ao lado, no topo da página */
 .title_cart {
     margin-left: 10px;
     display: flex;
