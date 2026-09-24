@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-MID IMPORT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="../imagens/logo_bmid_branca.png">
+
+</head>
+<!--vou fazer essas marcações pra você não ficar perdido, quando mexer em algo faz o mesmokk-->
+<!--pra fazer é só digitar "<!--" que vai aparecer ja automatico-->
+
+<body>
+    <!--essa é a barra de navegação-->
+    <header>
+        <div class="lado_esquerdo">
+            <img src="https://m.media-amazon.com/images/M/MV5BZGE5NzgzODYtZDU2MC00Nzc2LTkxMzItNDlmN2FiZDk1MjM5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                alt="">
+        </div>
+        <article class="img_inicio">
+            <img src="imagens/b-mid_logo.png" alt="Logo">
+        </article>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path
+                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="carrinho.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pag-wrap">
+            <h1 class="titulo_horario" style="margin-left:0;">Pagamento</h1>
+            <h2 class="titulo_horario_2" style="margin-left:0; margin-bottom:30px;">Confira seus dados e finalize a
+                compra com segurança.</h2>
+
+            <form class="pag-grid">
+                <div class="pag-form">
+                    <h3>Endereço de entrega</h3>
+                    <div class="pag-linha-campos pag-linha-3">
+                        <div class="pag-campo">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" placeholder="00000-000" >
+                             <p>Não sabe seu CEP? Clique <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener noreferrer">aqui</a></p>
+                        </div>
+                        <div class="pag-campo">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" placeholder="Rua, avenida...">
+                        </div>
+                        <div class="pag-campo">
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" placeholder="Nº">
+                        </div>
+                    </div>
+                    <div class="pag-linha-campos pag-linha-3b">
+                        <div class="pag-campo">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" placeholder="Apto, bloco... (opcional)">
+                        </div>
+                        <div class="pag-campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" placeholder="Sua cidade">
+                        </div>
+                        <div class="pag-campo">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" placeholder="UF">
+                        </div>
+                    </div>
+
+                    <h3 class="pag-h3-espaco">Forma de pagamento</h3>
+                    <div class="pag-metodos">
+                        <input type="radio" name="metodo" id="metodo-cartao" checked>
+                        <label for="metodo-cartao" class="pag-metodo-btn">💳 Cartão de Crédito</label>
+
+                        <input type="radio" name="metodo" id="metodo-pix">
+                        <label for="metodo-pix" class="pag-metodo-btn">Pix</label>
+
+                        <input type="radio" name="metodo" id="metodo-boleto">
+                        <label for="metodo-boleto" class="pag-metodo-btn">Boleto</label>
+                    </div>
+                    <p class="pag-obs">Pix é aprovado na hora. Boleto pode levar até 2 dias úteis para compensar.</p>
+
+                    <h3 class="pag-h3-espaco">Dados do cartão</h3>
+                    <div class="pag-linha-campos pag-linha-1">
+                        <div class="pag-campo">
+                            <label for="nome-cartao">Nome impresso no cartão</label>
+                            <input type="text" id="nome-cartao" placeholder="Como está no cartão">
+                        </div>
+                    </div>
+                    <div class="pag-linha-campos pag-linha-cartao" style="margin-bottom: 0;">
+                        <div class="pag-campo">
+                            <label for="numero-cartao">Número do cartão</label>
+                            <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="pag-campo">
+                            <label for="validade">Validade</label>
+                            <input type="text" id="validade" placeholder="MM/AA">
+                        </div>
+                        <div class="pag-campo">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="000">
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="pag-resumo">
+                    <h3>Resumo do pedido</h3>
+
+                    <div class="pag-linha">
+                        <span>Subtotal</span>
+                        <span>R$0</span>
+                    </div>
+                    <div class="pag-linha">
+                        <span>Frete</span>
+                        <span>Grátis</span>
+                    </div>
+                    <div class="pag-total">
+                        <span>Total</span>
+                        <span>R$0</span>
+                    </div>
+
+                   <a href=""> <button type="submit">Finalizar Compra</button></a>
+                </aside>
+               
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="foot-top">
+            <div class="foot1">
+                <div class="foot-header">
+                    <img src="imagens/logo_bmid_branca.png" alt="Logo B-Mid Import">
+                    <h2>B-MID IMPORT</h2>
+                </div>
+                <p>Sua loja de confiança, produtos importados com qualidade impecável.</p>
+            </div>
+
+
+            <div class="foot2">
+                <h3>Categorias</h3>
+                <p><a href="index.html">Início</a></p>
+                <p><a href="nike/nike.html">Nike</a></p>
+                <p><a href="syna/syna.html">Syna</a></p>
+                <p><a href="corteiz/corteiz.html">Corteiz</a></p>
+            </div>
+
+            <div class="foot2">
+                <h3>Departamentos</h3>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">WhatsApp</a></p>
+                <p><a href="horario_de_atendimento.html">Horário de atendimento</a></p>
+                <p><a href="guia_de_medidas.html">Guia de Medidas</a></p>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <hr class="divisor">
+
+            <div class="meios-pagamento">
+                <span>Meios de pagamento</span>
+                <div class="bandeiras">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visa.svg" alt="Visa"
+                        class="icon-white">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mastercard.svg" alt="Mastercard">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/americanexpress.svg" alt="Amex">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pix.svg" alt="Pix"
+                        class="icon-white">
+                </div>
+            </div>
+
+            <p class="copyright">©2026 B-MID IMPORT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1132,3 +1132,169 @@ table.gm-table td.gm-categoria {
 .gm-como-medir strong {
     color: #fff;
 }
+a{
+    text-decoration: none;
+}
+        .pag-wrap {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 60px;
+            color: #fff;
+        }
+
+        /* IMPORTANTE: existe uma regra global "form { width:500px; margin:70px auto; ... }"
+           usada no login/cadastro. Como ela é seletor de tag, ela pega esse <form> também
+           e espremia tudo em 500px. As linhas abaixo anulam isso especificamente aqui. */
+        form.pag-grid {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            margin-left: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .pag-form {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #0a0a0a;
+            border: 1px solid #222222;
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        .pag-form h3 {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .pag-form h3.pag-h3-espaco {
+            margin-top: 35px;
+        }
+
+        /* linhas de campo usando grid, evita bug de flex-basis empurrando os campos */
+        .pag-linha-campos {
+            display: grid;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+
+        .pag-campo {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .pag-campo label {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 7px;
+        }
+
+        .pag-campo input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            background-color: #111111;
+            border: 1px solid #222222;
+            border-radius: 8px;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+        }
+
+        .pag-campo input:focus {
+            outline: none;
+            border-color: #2F6BFF;
+            box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.2);
+        }
+
+        /* seletor de forma de pagamento — mesmo truque do input:checked + label do seletor de tamanho */
+        .pag-metodos {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .pag-metodos input[type="radio"] {
+            display: none;
+        }
+
+        .pag-metodo-btn {
+            background-color: #111111;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 15px 26px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.2s;
+            font-size: 15px;
+        }
+
+        .pag-metodo-btn:hover {
+            border-color: #2F6BFF;
+        }
+
+        .pag-metodos input[type="radio"]:checked+.pag-metodo-btn {
+            background-color: #2F6BFF;
+            border-color: #2F6BFF;
+        }
+
+        .pag-obs {
+            color: #999;
+            font-size: 13px;
+            margin: 0 0 5px 0;
+        }
+
+        /* resumo do pedido */
+        .pag-resumo {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #0a0a0a;
+            border: 1px solid #222222;
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        .pag-resumo h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .pag-linha {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            color: #ccc;
+            margin-top: 14px;
+        }
+
+        .pag-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid #222222;
+        }
+
+        .pag-resumo button {
+            margin-left: 0;
+            margin-top: 25px;
+            width: 100%;
+            max-width: none;
+            font-size: 16px;
+        }
