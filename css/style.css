@@ -1043,7 +1043,7 @@ form p a:hover {
     font-weight: 300;
 }
 
-/* título "Carrinho de compra" + ícone do carrinho ao lado, no topo da página */
+
 .title_cart {
     margin-left: 10px;
     display: flex;
@@ -1066,12 +1066,27 @@ form p a:hover {
     font-size: 50px;
     margin-left: 20px;
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo_horario svg {
+    scale: 3.5;
+    margin-bottom: 10px;
 }
 
 .titulo_horario_2 {
     font-size: 25px;
-    color: white;
-    margin-left: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    margin-left: 20px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.titulo_horario_3 {
+    color: #fff;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -1132,169 +1147,200 @@ table.gm-table td.gm-categoria {
 .gm-como-medir strong {
     color: #fff;
 }
-a{
+
+a {
     text-decoration: none;
 }
-        .pag-wrap {
-            max-width: 1400px;
-            margin: 50px auto;
-            padding: 0 60px;
-            color: #fff;
-        }
 
-        /* IMPORTANTE: existe uma regra global "form { width:500px; margin:70px auto; ... }"
-           usada no login/cadastro. Como ela é seletor de tag, ela pega esse <form> também
-           e espremia tudo em 500px. As linhas abaixo anulam isso especificamente aqui. */
-        form.pag-grid {
-            width: 100%;
-            max-width: none;
-            margin: 0;
-            margin-left: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
+.pag-wrap {
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 0 60px;
+    color: #fff;
+}
 
-        .pag-form {
-            width: 100%;
-            box-sizing: border-box;
-            background-color: #0a0a0a;
-            border: 1px solid #222222;
-            border-radius: 14px;
-            padding: 40px;
-        }
+form.pag-grid {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
 
-        .pag-form h3 {
-            color: #fff;
-            margin-top: 0;
-            margin-bottom: 18px;
-            font-size: 19px;
-            font-weight: 700;
-        }
+.pag-form {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+    border: 1px solid #222222;
+    border-radius: 14px;
+    padding: 40px;
+}
 
-        .pag-form h3.pag-h3-espaco {
-            margin-top: 35px;
-        }
+.pag-form h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 19px;
+    font-weight: 700;
+}
 
-        /* linhas de campo usando grid, evita bug de flex-basis empurrando os campos */
-        .pag-linha-campos {
-            display: grid;
-            gap: 18px;
-            margin-bottom: 18px;
-        }
+.pag-form h3.pag-h3-espaco {
+    margin-top: 35px;
+}
+
+/* linhas de campo usando grid, evita bug de flex-basis empurrando os campos */
+.pag-linha-campos {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 18px;
+}
 
 
-        .pag-campo {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
+.pag-campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
 
-        .pag-campo label {
-            font-size: 13px;
-            color: #ccc;
-            margin-bottom: 7px;
-        }
+.pag-campo label {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 7px;
+}
 
-        .pag-campo input {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 13px 15px;
-            background-color: #111111;
-            border: 1px solid #222222;
-            border-radius: 8px;
-            color: #fff;
-            font-family: "Montserrat", sans-serif;
-            font-size: 15px;
-        }
+.pag-campo input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    background-color: #111111;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
 
-        .pag-campo input:focus {
-            outline: none;
-            border-color: #2F6BFF;
-            box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.2);
-        }
+.pag-campo input:focus {
+    outline: none;
+    border-color: #2F6BFF;
+    box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.2);
+}
 
-        /* seletor de forma de pagamento — mesmo truque do input:checked + label do seletor de tamanho */
-        .pag-metodos {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
+/* seletor de forma de pagamento — mesmo truque do input:checked + label do seletor de tamanho */
+.pag-metodos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
 
-        .pag-metodos input[type="radio"] {
-            display: none;
-        }
+.pag-metodos input[type="radio"] {
+    display: none;
+}
 
-        .pag-metodo-btn {
-            background-color: #111111;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            padding: 15px 26px;
-            color: #fff;
-            cursor: pointer;
-            user-select: none;
-            transition: 0.2s;
-            font-size: 15px;
-        }
+.pag-metodo-btn {
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 15px 26px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    font-size: 15px;
+}
 
-        .pag-metodo-btn:hover {
-            border-color: #2F6BFF;
-        }
+.pag-metodo-btn:hover {
+    border-color: #2F6BFF;
+}
 
-        .pag-metodos input[type="radio"]:checked+.pag-metodo-btn {
-            background-color: #2F6BFF;
-            border-color: #2F6BFF;
-        }
+.pag-metodos input[type="radio"]:checked+.pag-metodo-btn {
+    background-color: #2F6BFF;
+    border-color: #2F6BFF;
+}
 
-        .pag-obs {
-            color: #999;
-            font-size: 13px;
-            margin: 0 0 5px 0;
-        }
+.pag-obs {
+    color: #999;
+    font-size: 13px;
+    margin: 0 0 5px 0;
+}
 
-        /* resumo do pedido */
-        .pag-resumo {
-            width: 100%;
-            box-sizing: border-box;
-            background-color: #0a0a0a;
-            border: 1px solid #222222;
-            border-radius: 14px;
-            padding: 40px;
-        }
+/* resumo do pedido */
+.pag-resumo {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+    border: 1px solid #222222;
+    border-radius: 14px;
+    padding: 40px;
+}
 
-        .pag-resumo h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 19px;
-            font-weight: 700;
-        }
+.pag-resumo h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: 700;
+}
 
-        .pag-linha {
-            display: flex;
-            justify-content: space-between;
-            font-size: 15px;
-            color: #ccc;
-            margin-top: 14px;
-        }
+.pag-linha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #ccc;
+    margin-top: 14px;
+}
 
-        .pag-total {
-            display: flex;
-            justify-content: space-between;
-            font-size: 22px;
-            font-weight: 700;
-            color: #fff;
-            margin-top: 18px;
-            padding-top: 18px;
-            border-top: 1px solid #222222;
-        }
+.pag-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #222222;
+}
 
-        .pag-resumo button {
-            margin-left: 0;
-            margin-top: 25px;
-            width: 100%;
-            max-width: none;
-            font-size: 16px;
-        }
+.pag-resumo button {
+    margin-left: 0;
+    margin-top: 25px;
+    width: 100%;
+    max-width: none;
+    font-size: 16px;
+}
+
+.pag-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 18px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #222222;
+}
+
+.pag-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.pag-item-info {
+    flex: 1;
+}
+
+.pag-item-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.pag-item-info span {
+    font-size: 12px;
+    color: #999;
+}
